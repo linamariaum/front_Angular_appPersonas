@@ -1,0 +1,22 @@
+<nz-table #personTable [nzData]="listaPersonas">
+    <thead>
+      <tr>
+        <th>Identificación</th>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>Edad</th>
+        <th>Género</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (data of personTable.data; track data) {
+        <tr>
+          <td>{{ data.numero_identificacion }}</td>
+          <td>{{ data.nombre }}</td>
+          <td>{{ data.apellido }}</td>
+          <td>{{ data.edad }}</td>
+          <td>{{ data.genero }}</td>
+        </tr>
+      }
+    </tbody>
+</nz-table>
